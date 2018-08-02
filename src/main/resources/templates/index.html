@@ -6,19 +6,6 @@
 
 <div th:replace="fragments :: page-header"></div>
 
-<div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a th:href="@{/}" class="navbar-brand">Trivia Finder</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a th:href="@{/}">Home</a></li>
-                <li><a th:href="@{/Login}">Login</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
 <div class="container body-content">
     <p>Welcome to Triva Finder!</p>
     <p>Your go-to spot for finding local triva in your area.</p>
