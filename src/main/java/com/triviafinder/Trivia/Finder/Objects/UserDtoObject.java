@@ -1,16 +1,16 @@
 package com.triviafinder.Trivia.Finder.Objects;
 
 import org.hibernate.validator.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity // This tells Hibernate to make a table out of this class
+import javax.validation.constraints.NotNull;
+///import javax.persistence.Entity;
+///import javax.persistence.GeneratedValue;
+///import javax.persistence.GenerationType;
+///import javax.persistence.Id;
+///@Entity // This tells Hibernate to make a table out of this class
 public class UserDtoObject {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+///    @Id
+///    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
     @NotNull
