@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+
+    <h1>Host Registration</h1>
+    <form action="/" th:object="${user}" method="POST">
+        <div>
+            <label>Name or Business</label>
+            <input th:field="*{hostname}"/>
+            <p th:each="error: ${#fields.errors('hostname')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label>Address</label>
+            <input th:field="*{address}" />
+            <p th:each="error: ${#fields.errors('address')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label>Username</label>
+            <input th:field="*{username}" />
+            <p th:each="error: ${#fields.errors('username')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label>Website Address</label>
+            <input th:field="*{webaddress}" />
+            <p th:each="error: ${#fields.errors('webaddress')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label>Menu Address</label>
+            <input th:field="*{menuaddress}" />
+            <p th:each="error: ${#fields.errors('menuaddress')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" th:field="*{email}"/>
+            <p th:each="error : ${#fields.errors('email')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" th:field="*{password}"/>
+            <p th:each="error : ${#fields.errors('password')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label>Confirm Password</label>
+            <input type="password" th:field="*{matchingPassword}"/>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
