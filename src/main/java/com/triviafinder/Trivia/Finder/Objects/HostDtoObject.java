@@ -22,11 +22,11 @@ public class HostDtoObject {
 
     @NotNull
     @NotEmpty
-    private String webaddress;
+    private String webAddress;
 
     @NotNull
     @NotEmpty
-    private String menuadress;
+    private String menuAddress;
 
     @NotNull
     @NotEmpty
@@ -73,21 +73,21 @@ public class HostDtoObject {
     }
 
     @NotNull
-    public String getWebaddress() {
-        return webaddress;
+    public String getWebAddress() {
+        return webAddress;
     }
 
-    public void setWebaddress(@NotNull String webaddress) {
-        this.webaddress = webaddress;
+    public void setWebAddress(@NotNull String webAddress) {
+        this.webAddress = webAddress;
     }
 
     @NotNull
-    public String getMenuadress() {
-        return menuadress;
+    public String getMenuAddress() {
+        return menuAddress;
     }
 
-    public void setMenuadress(@NotNull String menuadress) {
-        this.menuadress = menuadress;
+    public void setMenuAddress(@NotNull String menuAddress) {
+        this.menuAddress = menuAddress;
     }
 
     @NotNull

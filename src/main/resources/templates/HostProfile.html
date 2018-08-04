@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org/">
+<html xmlns:th="http://www.thymeleaf.org/" xmlns:allign-content="http://www.w3.org/1999/xhtml">
 <head th:replace="fragments :: head">
 </head>
+<link th:href="@{/css/triviafinder.css}" rel="stylesheet" />
 <body>
     <div class="container body-content">
         <div th:replace="fragments :: page-header"></div>
 
-        <div id="Title">
+        <div id="Title" style="align-content:center">
             <h1>Fallon's Irish Bar  Grill</h1>
-            <h2>9200 Olive Blvd #116  Olivette, MO 63132 (314) 991-9800</h2>
-            <p><strong>5/5 stars</strong></p>
+            <p>9200 Olive Blvd #116 <br/>  Olivette, MO 63132 <br/> (314) 991-9800</p>
+            <h4><strong>5/5 stars</strong></h4>
         </div>
-        <div id="profilepicture">
+        <div id="ProfilePicture">
             <img src="https://static1.squarespace.com/static/5b09ac6d2714e54cf495c233/t/5b11a8496d2a737bcbb8d2f7/1527883854744/static1.squarespace.jpg?format=750w" />
         </div>
         <div id="Links">
