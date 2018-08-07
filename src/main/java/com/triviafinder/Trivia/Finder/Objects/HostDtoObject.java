@@ -1,35 +1,48 @@
 package com.triviafinder.Trivia.Finder.Objects;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.security.PrivateKey;
 
 public class HostDtoObject {
 
     private Integer id;
 
-    @NotEmpty
     @NotNull
-    private String HostUserName;
-
     @NotEmpty
-    @NotNull
-    private String HostUserPhysAddress;
+    private String name;
 
+    @NotNull
     @NotEmpty
-    @NotNull
-    private String HostUserEmail;
+    private String address;
 
+    @NotNull
     @NotEmpty
+    @Email(message = "Please enter a valid email address.")
+    private String email;
+
     @NotNull
-    private String HostUserPassword;
+    @NotEmpty
+    @Size(min = 6, max = 200, message
+            = "Password must be at least 6 characters long and less than 200.")
+    private String password;
 
-    private String HostUserWebsite;
+    @NotNull
+    @NotEmpty
+    private String matchingPassword;
 
-    private String HostUserMenu;
+    private String website;
 
-    private String HostUserDescription;
+    private String menu;
+
+    @NotNull
+    @NotEmpty
+    private String description;
+
+    /// Getters and Setters
 
 
     public Integer getId() {
@@ -41,62 +54,72 @@ public class HostDtoObject {
     }
 
     @NotNull
-    public String getHostUserName() {
-        return HostUserName;
+    public String getName() {
+        return name;
     }
 
-    public void setHostUserName(@NotNull String hostUserName) {
-        HostUserName = hostUserName;
-    }
-
-    @NotNull
-    public String getHostUserPhysAddress() {
-        return HostUserPhysAddress;
-    }
-
-    public void setHostUserPhysAddress(@NotNull String hostUserPhysAddress) {
-        HostUserPhysAddress = hostUserPhysAddress;
+    public void setName(@NotNull String name) {
+        this.name = name;
     }
 
     @NotNull
-    public String getHostUserEmail() {
-        return HostUserEmail;
+    public String getAddress() {
+        return address;
     }
 
-    public void setHostUserEmail(@NotNull String hostUserEmail) {
-        HostUserEmail = hostUserEmail;
+    public void setAddress(@NotNull String address) {
+        this.address = address;
     }
 
     @NotNull
-    public String getHostUserPassword() {
-        return HostUserPassword;
+    public String getEmail() {
+        return email;
     }
 
-    public void setHostUserPassword(@NotNull String hostUserPassword) {
-        HostUserPassword = hostUserPassword;
+    public void setEmail(@NotNull String email) {
+        this.email = email;
     }
 
-    public String getHostUserWebsite() {
-        return HostUserWebsite;
+    @NotNull
+    public String getPassword() {
+        return password;
     }
 
-    public void setHostUserWebsite(String hostUserWebsite) {
-        HostUserWebsite = hostUserWebsite;
+    public void setPassword(@NotNull String password) {
+        this.password = password;
     }
 
-    public String getHostUserMenu() {
-        return HostUserMenu;
+    @NotNull
+    public String getMatchingPassword() {
+        return matchingPassword;
     }
 
-    public void setHostUserMenu(String hostUserMenu) {
-        HostUserMenu = hostUserMenu;
+    public void setMatchingPassword(@NotNull String matchingPassword) {
+        this.matchingPassword = matchingPassword;
     }
 
-    public String getHostUserDescription() {
-        return HostUserDescription;
+    public String getWebsite() {
+        return website;
     }
 
-    public void setHostUserDescription(String hostUserDescription) {
-        HostUserDescription = hostUserDescription;
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getMenu() {
+        return menu;
+    }
+
+    public void setMenu(String menu) {
+        this.menu = menu;
+    }
+
+    @NotNull
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(@NotNull String description) {
+        this.description = description;
     }
 }

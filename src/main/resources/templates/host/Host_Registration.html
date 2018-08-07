@@ -8,52 +8,52 @@
 
 <div class="container body-content">
 
-    <h1>User Registration</h1>
-    <form action="/" th:object="${host}" method="POST">
+    <h1>Host Registration</h1>
+    <form action="/host/host_registration" th:object="${host}" method="POST">
         <div class="form-group">
             <label>Name or Business</label>
-            <input th:field="${HostUserName}"/>
-            <p th:each="error: ${#fields.errors('HostUserName')}"
+            <input th:field="*{Name}"/>
+            <p th:each="error: ${#fields.errors('Name')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Address</label>
-            <input th:field="${HostUserPhysAddress}"/>
-            <p th:each="error : ${#fields.errors('HostUserPysAddress')}"
+            <input th:field="*{Address}"/>
+            <p th:each="error : ${#fields.errors('Address')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Email</label>
-            <input type="email" th:field="*{HostUserEmail}"/>
-            <p th:each="error : ${#fields.errors('HostUserEmail')}"
+            <input type="email" th:field="*{Email}"/>
+            <p th:each="error : ${#fields.errors('Email')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Password</label>
-            <input type="password" th:field="*{HostUserPassword}"/>
-            <p th:each="error : ${#fields.errors('HostUserPassword')}"
+            <input type="password" th:field="*{Password}"/>
+            <p th:each="error : ${#fields.errors('Password')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Confirm Password</label>
-            <input type="password" th:field="*{matchingHostUserPassword}"/>
+            <input type="password" th:field="*{matchingPassword}"/>
         </div>
         <div class="form-group">
             <label>Web Address</label>
-            <input th:field="*{HostUserWebsite}"/>
-            <p th:each="error : ${#fields.errors('HostUserWebsite')}"
+            <input th:field="*{Website}"/>
+            <p th:each="error : ${#fields.errors('Website')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Menu Address</label>
-            <input th:field="*{HostUserMenu}"/>
-            <p th:each="error : ${#fields.errors('HostUserMenu')}"
+            <input th:field="*{Menu}"/>
+            <p th:each="error : ${#fields.errors('Menu')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Description</label>
-            <input th:field="*{HostUserDescription}"/>
-            <p th:each="error : ${#fields.errors('HostUserDescription')}"
+            <input th:field="*{Description}"/>
+            <p th:each="error : ${#fields.errors('Description')}"
                th:text="${error}">Validation error</p>
         </div>
         <button type="submit">Submit</button>

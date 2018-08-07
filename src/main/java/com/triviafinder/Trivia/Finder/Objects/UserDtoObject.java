@@ -1,8 +1,12 @@
 package com.triviafinder.Trivia.Finder.Objects;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 ///import javax.persistence.Entity;
 ///import javax.persistence.GeneratedValue;
 ///import javax.persistence.GenerationType;
@@ -13,29 +17,36 @@ public class UserDtoObject {
 ///    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This entry is required!")
+    @NotEmpty(message = "This entry is required!")
     private String firstName;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This entry is required!")
+    @NotEmpty(message = "This entry is required!")
     private String lastName;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This entry is required!")
+    @NotEmpty(message = "This entry is required!")
     private String username;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This entry is required!")
+    @NotEmpty(message = "This entry is required!")
+    @Size(min = 6, max = 200, message
+            = "Password must be at least 6 characters long and less than 200.")
     private String password;
+
+    @NotNull(message = "This entry is required!")
+    @NotEmpty(message = "This entry is required!")
     private String matchingPassword;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This entry is required!")
+    @NotEmpty(message = "This entry is required!")
+    @Email(message = "Please enter a valid email address.")
     private String email;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This entry is required!")
+    @NotEmpty(message = "This entry is required!")
+    @Max(value = 6, message = "Please enter a proper 6 digit area code.")
     private Integer zipcode;
 
 

@@ -20,4 +20,9 @@ public class HostRegistrationController {
         model.addAttribute("host", hostDto);
         return "/host/host_registration";
     }
+
+    @RequestMapping(value = "/host/host_registration", method = RequestMethod.POST)
+    public String showRegistrationFormPOST() {
+        return "/registration-welcome";
+    }
 }
