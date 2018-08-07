@@ -9,7 +9,7 @@
 <div class="container body-content">
 
     <h1>User Registration</h1>
-    <form action="/" th:object="${user}" method="POST">
+    <form action="/user/user_registration" th:object="${user}" method="POST">
         <div class="form-group">
             <label>First Name</label>
             <input th:field="*{firstName}"/>

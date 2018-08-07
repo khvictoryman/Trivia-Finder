@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+    <h1>Welcome! Thank you for registering!</h1>
+    <h4>You will be redirected to the forums in just a moment...</h4>
+</div>
+<meta http-equiv="Refresh" content="5;url=/forum" />
+</body>
+</html>

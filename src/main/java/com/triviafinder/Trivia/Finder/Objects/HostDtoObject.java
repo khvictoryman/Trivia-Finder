@@ -3,38 +3,33 @@ package com.triviafinder.Trivia.Finder.Objects;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;
+import java.security.PrivateKey;
 
 public class HostDtoObject {
 
     private Integer id;
 
-    @NotNull
     @NotEmpty
-    private String name;
+    @NotNull
+    private String HostUserName;
 
-    @NotNull
     @NotEmpty
-    private String address;
+    @NotNull
+    private String HostUserPhysAddress;
 
-    @NotNull
     @NotEmpty
-    private String username;
+    @NotNull
+    private String HostUserEmail;
 
-    @NotNull
     @NotEmpty
-    private String webAddress;
+    @NotNull
+    private String HostUserPassword;
 
-    @NotNull
-    @NotEmpty
-    private String menuAddress;
+    private String HostUserWebsite;
 
-    @NotNull
-    @NotEmpty
-    private String password;
+    private String HostUserMenu;
 
-    @NotNull
-    @NotEmpty
-    private String email;
+    private String HostUserDescription;
 
 
     public Integer getId() {
@@ -46,65 +41,62 @@ public class HostDtoObject {
     }
 
     @NotNull
-    public String getName() {
-        return name;
+    public String getHostUserName() {
+        return HostUserName;
     }
 
-    public void setName(@NotNull String name) {
-        this.name = name;
-    }
-
-    @NotNull
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(@NotNull String address) {
-        this.address = address;
+    public void setHostUserName(@NotNull String hostUserName) {
+        HostUserName = hostUserName;
     }
 
     @NotNull
-    public String getUsername() {
-        return username;
+    public String getHostUserPhysAddress() {
+        return HostUserPhysAddress;
     }
 
-    public void setUsername(@NotNull String username) {
-        this.username = username;
-    }
-
-    @NotNull
-    public String getWebAddress() {
-        return webAddress;
-    }
-
-    public void setWebAddress(@NotNull String webAddress) {
-        this.webAddress = webAddress;
+    public void setHostUserPhysAddress(@NotNull String hostUserPhysAddress) {
+        HostUserPhysAddress = hostUserPhysAddress;
     }
 
     @NotNull
-    public String getMenuAddress() {
-        return menuAddress;
+    public String getHostUserEmail() {
+        return HostUserEmail;
     }
 
-    public void setMenuAddress(@NotNull String menuAddress) {
-        this.menuAddress = menuAddress;
-    }
-
-    @NotNull
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(@NotNull String password) {
-        this.password = password;
+    public void setHostUserEmail(@NotNull String hostUserEmail) {
+        HostUserEmail = hostUserEmail;
     }
 
     @NotNull
-    public String getEmail() {
-        return email;
+    public String getHostUserPassword() {
+        return HostUserPassword;
     }
 
-    public void setEmail(@NotNull String email) {
-        this.email = email;
+    public void setHostUserPassword(@NotNull String hostUserPassword) {
+        HostUserPassword = hostUserPassword;
+    }
+
+    public String getHostUserWebsite() {
+        return HostUserWebsite;
+    }
+
+    public void setHostUserWebsite(String hostUserWebsite) {
+        HostUserWebsite = hostUserWebsite;
+    }
+
+    public String getHostUserMenu() {
+        return HostUserMenu;
+    }
+
+    public void setHostUserMenu(String hostUserMenu) {
+        HostUserMenu = hostUserMenu;
+    }
+
+    public String getHostUserDescription() {
+        return HostUserDescription;
+    }
+
+    public void setHostUserDescription(String hostUserDescription) {
+        HostUserDescription = hostUserDescription;
     }
 }

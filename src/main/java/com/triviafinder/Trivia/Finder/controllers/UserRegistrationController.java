@@ -22,6 +22,10 @@ public class UserRegistrationController {
         return "user/user_registration";
     }
 
+    @RequestMapping(value = "/user/user_registration", method = RequestMethod.POST)
+    public String ValidateUserRegistration() {
+        return "/registration-welcome";
+    }
 
 
 }
