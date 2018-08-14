@@ -1,14 +1,17 @@
-package com.triviafinder.Trivia.Finder.Objects;
+package com.triviafinder.Trivia.Finder.Object_Models;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.security.PrivateKey;
 
-public class HostDtoObject {
+public class HostModel {
 
+    @Id
+    @GeneratedValue
     private Integer id;
 
     @NotNull
@@ -47,10 +50,6 @@ public class HostDtoObject {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     @NotNull
