@@ -35,8 +35,8 @@ public class UserRegistrationController {
         if (errors.hasErrors()) {
             return "/user/user_registration";
         }
-        UserModel aNewUser = new UserModel()
-        UserDao.save(aNewUser); // ToDo:  Fix error(Non-static method, save, cannot be referenced from a static context.
+
+        userDao.save(newUser);
         return "/registration-welcome";
     }
 

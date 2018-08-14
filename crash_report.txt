@@ -1,0 +1,117 @@
+4:26:15 PM: Executing task 'bootRun'...
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :findMainClass
+
+> Task :bootRun
+16:26:17.215 [main] DEBUG org.springframework.boot.devtools.settings.DevToolsSettings - Included patterns for restart : []
+16:26:17.218 [main] DEBUG org.springframework.boot.devtools.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter/target/classes/, /spring-boot-autoconfigure/target/classes/, /spring-boot-starter-[\w-]+/, /spring-boot/target/classes/, /spring-boot-actuator/target/classes/, /spring-boot-devtools/target/classes/]
+16:26:17.218 [main] DEBUG org.springframework.boot.devtools.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/Captain%20Kirk/Documents/Lift%20Off/Trivia%20Finder/build/classes/java/main/, file:/C:/Users/Captain%20Kirk/Documents/Lift%20Off/Trivia%20Finder/build/resources/main/]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::  (v1.5.15.BUILD-SNAPSHOT)
+
+2018-08-14 16:26:17.538  INFO 19540 --- [  restartedMain] c.t.T.Finder.TriviaFinderApplication     : Starting TriviaFinderApplication on Captain-Kirks-Laptop with PID 19540 (started by Captain Kirk in C:\Users\Captain Kirk\Documents\Lift Off\Trivia Finder)
+2018-08-14 16:26:17.539  INFO 19540 --- [  restartedMain] c.t.T.Finder.TriviaFinderApplication     : No active profile set, falling back to default profiles: default
+2018-08-14 16:26:17.776  INFO 19540 --- [  restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@db405e4: startup date [Tue Aug 14 16:26:17 CDT 2018]; root of context hierarchy
+2018-08-14 16:26:19.097  INFO 19540 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$619f694b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-14 16:26:19.629  INFO 19540 --- [  restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-14 16:26:19.661  INFO 19540 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-14 16:26:19.661  INFO 19540 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-14 16:26:19.783  INFO 19540 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-14 16:26:19.783  INFO 19540 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2010 ms
+2018-08-14 16:26:19.904  INFO 19540 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-14 16:26:19.909  INFO 19540 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-14 16:26:19.910  INFO 19540 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-14 16:26:19.910  INFO 19540 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-14 16:26:19.910  INFO 19540 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-14 16:26:20.321  INFO 19540 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-14 16:26:20.339  INFO 19540 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-14 16:26:20.428  INFO 19540 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-08-14 16:26:20.430  INFO 19540 --- [  restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-08-14 16:26:20.431  INFO 19540 --- [  restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-08-14 16:26:20.486  INFO 19540 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-14 16:26:20.954  INFO 19540 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-14 16:26:21.383  INFO 19540 --- [  restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-08-14 16:26:21.403  INFO 19540 --- [  restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: user_model
+2018-08-14 16:26:21.404  INFO 19540 --- [  restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: user_model
+2018-08-14 16:26:21.480  INFO 19540 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-14 16:26:21.667  WARN 19540 --- [  restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hostRegistrationController': Unsatisfied dependency expressed through field 'hostDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.Object_Models.HostModel
+2018-08-14 16:26:21.667  INFO 19540 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-14 16:26:21.673  INFO 19540 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-08-14 16:26:21.689  INFO 19540 --- [  restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-08-14 16:26:21.703 ERROR 19540 --- [  restartedMain] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hostRegistrationController': Unsatisfied dependency expressed through field 'hostDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.Object_Models.HostModel
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1272) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.15.BUILD-SNAPSHOT.jar:1.5.15.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.15.BUILD-SNAPSHOT.jar:1.5.15.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.15.BUILD-SNAPSHOT.jar:1.5.15.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.15.BUILD-SNAPSHOT.jar:1.5.15.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.15.BUILD-SNAPSHOT.jar:1.5.15.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.15.BUILD-SNAPSHOT.jar:1.5.15.BUILD-SNAPSHOT]
+	at com.triviafinder.Trivia.Finder.TriviaFinderApplication.main(TriviaFinderApplication.java:10) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.15.BUILD-SNAPSHOT.jar:1.5.15.BUILD-SNAPSHOT]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.Object_Models.HostModel
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1634) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.Object_Models.HostModel
+	at org.hibernate.jpa.internal.metamodel.MetamodelImpl.managedType(MetamodelImpl.java:210) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:71) ~[spring-data-jpa-1.11.14.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:68) ~[spring-data-jpa-1.11.14.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:184) ~[spring-data-jpa-1.11.14.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:117) ~[spring-data-jpa-1.11.14.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:99) ~[spring-data-jpa-1.11.14.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:198) ~[spring-data-commons-1.13.14.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277) ~[spring-data-commons-1.13.14.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263) ~[spring-data-commons-1.13.14.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101) ~[spring-data-jpa-1.11.14.RELEASE.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1692) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1630) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
+	... 34 common frames omitted
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 5s
+4 actionable tasks: 2 executed, 2 up-to-date
+4:26:21 PM: Task execution finished 'bootRun'.
