@@ -1,6 +1,6 @@
 package com.triviafinder.Trivia.Finder.DataAccessObjects;
 
-import com.triviafinder.Trivia.Finder.Object_Models.UserModel;
+import com.triviafinder.Trivia.Finder.models.user.UserModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

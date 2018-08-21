@@ -13,34 +13,45 @@
         <div class="form-group">
             <label>First Name</label>
             <input th:field="*{firstName}"/>
-            <p th:each="error: ${#fields.errors('firstName')}"
+            <p style="color:red" th:each="error: ${#fields.errors('firstName')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Last Name</label>
             <input th:field="*{lastName}"/>
-            <p th:each="error : ${#fields.errors('lastName')}"
+            <p style="color:red" th:each="error : ${#fields.errors('lastName')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
-            <label>Email</label>
-            <input type="email" th:field="*{email}"/>
-            <p th:each="error : ${#fields.errors('email')}"
+            <label>Username</label>
+            <input th:field="*{username}"/>
+            <p style="color:red" th:each="error : ${#fields.errors('username')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Password</label>
             <input type="password" th:field="*{password}"/>
-            <p th:each="error : ${#fields.errors('password')}"
+            <p style="color:red" th:each="error : ${#fields.errors('password')}"
                th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
             <label>Confirm Password</label>
             <input type="password" th:field="*{matchingPassword}"/>
+            <p style="color:red" th:each="error : ${#fields.errors('matchingPassword')}"
+               th:text="${error}">Validation error</p>
         </div>
         <div class="form-group">
+            <label>Email</label>
+            <input type="email" th:field="*{email}"/>
+            <p style="color:red" th:each="error : ${#fields.errors('email')}"
+               th:text="${error}">Validation error</p>
+        </div>
+
+        <div class="form-group">
             <label>Zip Code</label>
-            <input th:field="*{zipcode}"/>
+            <input size="5" th:field="*{zipCode}"/>
+            <p style="color:red" th:each="error : ${#fields.errors('zipCode')}"
+               th:text="${error}">Validation error</p>
         </div>
         <button type="submit">Submit</button>
 

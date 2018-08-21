@@ -45,7 +45,7 @@
 2018-08-14 16:26:21.403  INFO 19540 --- [  restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: user_model
 2018-08-14 16:26:21.404  INFO 19540 --- [  restartedMain] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: user_model
 2018-08-14 16:26:21.480  INFO 19540 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-08-14 16:26:21.667  WARN 19540 --- [  restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hostRegistrationController': Unsatisfied dependency expressed through field 'hostDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.Object_Models.HostModel
+2018-08-14 16:26:21.667  WARN 19540 --- [  restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hostRegistrationController': Unsatisfied dependency expressed through field 'hostDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.models.host.HostModel
 2018-08-14 16:26:21.667  INFO 19540 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2018-08-14 16:26:21.673  INFO 19540 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
 2018-08-14 16:26:21.689  INFO 19540 --- [  restartedMain] utoConfigurationReportLoggingInitializer : 
@@ -53,7 +53,7 @@
 Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
 2018-08-14 16:26:21.703 ERROR 19540 --- [  restartedMain] o.s.boot.SpringApplication               : Application startup failed
 
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hostRegistrationController': Unsatisfied dependency expressed through field 'hostDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.Object_Models.HostModel
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hostRegistrationController': Unsatisfied dependency expressed through field 'hostDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.models.host.HostModel
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
@@ -79,7 +79,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-1.5.15.BUILD-SNAPSHOT.jar:1.5.15.BUILD-SNAPSHOT]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.Object_Models.HostModel
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hostDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.models.host.HostModel
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1634) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
@@ -92,7 +92,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.18.RELEASE.jar:4.3.18.RELEASE]
 	... 24 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.Object_Models.HostModel
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.triviafinder.Trivia.Finder.models.host.HostModel
 	at org.hibernate.jpa.internal.metamodel.MetamodelImpl.managedType(MetamodelImpl.java:210) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
 	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:71) ~[spring-data-jpa-1.11.14.RELEASE.jar:na]
 	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:68) ~[spring-data-jpa-1.11.14.RELEASE.jar:na]

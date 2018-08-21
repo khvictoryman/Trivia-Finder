@@ -1,7 +1,7 @@
 package com.triviafinder.Trivia.Finder.controllers;
 
 import com.triviafinder.Trivia.Finder.DataAccessObjects.UserDao;
-import com.triviafinder.Trivia.Finder.Object_Models.UserModel;
+import com.triviafinder.Trivia.Finder.models.user.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,14 +23,15 @@ public class UserRegistrationController {
     private UserDao userDao;
 
     @RequestMapping(value = "/user/user_registration", method = RequestMethod.GET)
-    public String showRegistrationForm(Model model) {
-        //UserModel userDto = new UserModel();
-        model.addAttribute(new UserModel());
+    public String showRegistrationForm(WebRequest request, Model model, @ModelAttribute("user") UserModel accountDto,
+                                       BindingResult result, Errors errors) {
+        UserModel userDto = new UserModel();
+        model.addAttribute("user", userDto);
         return "user/user_registration";
     }
 
     @RequestMapping(value = "/user/user_registration", method = RequestMethod.POST)
-    public String ValidateUserRegistration(@ModelAttribute  @Valid UserModel newUser,
+    public String ValidateUserRegistration(@ModelAttribute("user")  @Valid UserModel newUser,
                                            Errors errors, Model model) {
         if (errors.hasErrors()) {
             return "/user/user_registration";

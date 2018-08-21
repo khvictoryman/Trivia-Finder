@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 
-@Repository
 @Transactional
-public interface HostDao extends CrudRepository<HostModel, Integer> {
+@Repository
+public interface HostRankDao extends CrudRepository<HostModel, Integer> {
 }

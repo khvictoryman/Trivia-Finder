@@ -1,4 +1,4 @@
-package com.triviafinder.Trivia.Finder.Object_Models;
+package com.triviafinder.Trivia.Finder.models.user;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -6,7 +6,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -32,7 +31,7 @@ public class UserModel {
     @NotNull(message = "This entry is required!")
     @NotEmpty(message = "This entry is required!")
     @Size(min = 6, max = 200, message
-            = "Password must be at least 6 characters long and less than 200.")
+           = "Password must be at least 6 characters long and less than 200.")
     private String password;
 
     @NotNull(message = "This entry is required!")
@@ -45,9 +44,7 @@ public class UserModel {
     private String email;
 
     @NotNull(message = "This entry is required!")
-    @NotEmpty(message = "This entry is required!")
-    @Max(value = 6, message = "Please enter a proper 6 digit area code.")
-    private Integer zipcode;
+    private Integer zipCode;
 
 
     // standard getters and setters
@@ -109,13 +106,11 @@ public class UserModel {
     }
 
     @NotNull
-    public Integer getZipcode() {
-        return zipcode;
+    public Integer getZipCode() {
+        return zipCode;
     }
 
-    public void setZipcode(@NotNull Integer zipcode) {
-        this.zipcode = zipcode;
+    public void setZipCode(@NotNull Integer zipCode) {
+        this.zipCode = zipCode;
     }
-
-
 }

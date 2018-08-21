@@ -1,7 +1,7 @@
 package com.triviafinder.Trivia.Finder.controllers;
 
 import com.triviafinder.Trivia.Finder.DataAccessObjects.HostDao;
-import com.triviafinder.Trivia.Finder.Object_Models.HostModel;
+import com.triviafinder.Trivia.Finder.models.host.HostModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,10 +29,13 @@ public class HostRegistrationController {
     }
 
     @RequestMapping(value = "/host/host_registration", method = RequestMethod.POST)
-    public String showRegistrationFormPOST(@ModelAttribute @Valid HostModel newHost, Errors errors, Model model) {
+    public String showRegistrationFormPOST(@ModelAttribute("host") @Valid HostModel newHost, Errors errors, Model model) {
         if (errors.hasErrors()) {
+
             return "/host/host_registration";
         }
+        model.addAttribute("ranking", 0);
+        model.addAttribute("numberOfRankings", 0);
         hostDao.save(newHost);
         return "/registration-welcome";
     }

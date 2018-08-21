@@ -1,49 +1,54 @@
-package com.triviafinder.Trivia.Finder.Object_Models;
+package com.triviafinder.Trivia.Finder.models.host;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Entity
 public class HostModel {
 
     @Id
     @GeneratedValue
     private Integer id;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This field is required!")
+    @NotEmpty(message = "This field is required!")
     private String name;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This field is required!")
+    @NotEmpty(message = "This field is required!")
     private String address;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This field is required!")
+    @NotEmpty(message = "This field is required!")
     @Email(message = "Please enter a valid email address.")
     private String email;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This field is required!")
+    @NotEmpty(message = "This field is required!")
     @Size(min = 6, max = 200, message
             = "Password must be at least 6 characters long and less than 200.")
     private String password;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This field is required!")
+    @NotEmpty(message = "This field is required!")
     private String matchingPassword;
 
     private String website;
 
     private String menu;
 
-    @NotNull
-    @NotEmpty
+    @NotNull(message = "This field is required!")
+    @NotEmpty(message = "This field is required!")
     private String description;
+
+    @NotNull(message = "This field is required!")
+    private Boolean hasFood;
+
 
     /// Getters and Setters
 
@@ -121,4 +126,14 @@ public class HostModel {
     public void setDescription(@NotNull String description) {
         this.description = description;
     }
+
+    @NotNull
+    public Boolean getHasFood() {
+        return hasFood;
+    }
+
+    public void setHasFood(@NotNull Boolean hasFood) {
+        this.hasFood = hasFood;
+    }
+
 }
