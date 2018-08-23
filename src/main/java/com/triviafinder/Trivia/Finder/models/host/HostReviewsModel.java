@@ -4,6 +4,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 public class HostReviewsModel {
@@ -13,7 +15,9 @@ public class HostReviewsModel {
     private Integer id;
 
     @NotNull
-    private Integer hostId;
+    @OneToMany
+    @JoinColumn(name = "hostId")
+    private Integer hostReviewId;
 
     @NotNull
     private Integer userId;
@@ -55,10 +59,10 @@ public class HostReviewsModel {
 
     @NotNull
     public Integer getHostId() {
-        return hostId;
+        return hostReviewId;
     }
 
     public void setHostId(@NotNull Integer hostId) {
-        this.hostId = hostId;
+        this.hostReviewId = hostId;
     }
 }

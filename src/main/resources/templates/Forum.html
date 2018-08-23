@@ -17,15 +17,14 @@
 
     <tr>
         <th>Name</th>
-        <th>Distance</th>
         <th>Rating</th>
         <th>Has Food</th>
     </tr>
 
-    <tr th:each="cheese : ${cheeses}">
-        <td th:text="${cheese.name}"></td>
+    <tr th:each="host : ${hosts}">
+        <td th:text="${host.name}"></td>
         <td th:text="${cheese.description}"></td>
-        <td th:text="${cheese.type.name}"></td>
+        <td th:text="${host.name}"></td>
     </tr>
 
 </table>

@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -14,6 +15,10 @@ public class HostModel {
     @Id
     @GeneratedValue
     private Integer id;
+
+    @GeneratedValue
+    @ManyToOne
+    private Integer host_id;
 
     @NotNull(message = "This field is required!")
     @NotEmpty(message = "This field is required!")

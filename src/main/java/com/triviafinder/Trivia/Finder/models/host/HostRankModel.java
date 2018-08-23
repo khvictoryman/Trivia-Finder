@@ -2,6 +2,8 @@ package com.triviafinder.Trivia.Finder.models.host;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 public class HostRankModel {
@@ -11,6 +13,8 @@ public class HostRankModel {
     private Integer id;
 
     @NotNull
+    @OneToMany
+    @JoinColumn(name = "hostId")
     private Integer hostId;
 
     @NotNull
