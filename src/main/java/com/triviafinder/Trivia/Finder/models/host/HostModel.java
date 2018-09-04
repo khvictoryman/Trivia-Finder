@@ -17,8 +17,10 @@ public class HostModel {
     private Integer id;
 
     @GeneratedValue
-    @ManyToOne
-    private Integer host_id;
+    private Integer hostId;
+
+    @NotNull(message = "The hostRank came up Null!")
+    private Integer hostRank;
 
     @NotNull(message = "This field is required!")
     @NotEmpty(message = "This field is required!")
@@ -26,7 +28,15 @@ public class HostModel {
 
     @NotNull(message = "This field is required!")
     @NotEmpty(message = "This field is required!")
-    private String address;
+    private String addressLineOne;
+
+    @NotNull(message = "This field is required!")
+    @NotEmpty(message = "This field is required!")
+    private String addressLineTwo;
+
+    @NotNull(message = "This field is required!")
+    @NotEmpty(message = "This field is required!")
+    private String phone;
 
     @NotNull(message = "This field is required!")
     @NotEmpty(message = "This field is required!")
@@ -54,6 +64,10 @@ public class HostModel {
     @NotNull(message = "This field is required!")
     private Boolean hasFood;
 
+    @NotEmpty(message = "This field is required!")
+    @NotNull(message = "This field is required!")
+    private String trivia;
+
 
     /// Getters and Setters
 
@@ -72,12 +86,21 @@ public class HostModel {
     }
 
     @NotNull
-    public String getAddress() {
-        return address;
+    public String getAddressLineOne() {
+        return addressLineOne;
     }
 
-    public void setAddress(@NotNull String address) {
-        this.address = address;
+    public void setAddressLineOne(@NotNull String addressLineOne) {
+        this.addressLineOne = addressLineOne;
+    }
+
+    @NotNull
+    public String getAddressLineTwo() {
+        return addressLineTwo;
+    }
+
+    public void setAddressLineTwo(@NotNull String addressLineTwo) {
+        this.addressLineTwo = addressLineTwo;
     }
 
     @NotNull
@@ -141,4 +164,30 @@ public class HostModel {
         this.hasFood = hasFood;
     }
 
+    @NotNull
+    public Integer getHostRank() {
+        return hostRank;
+    }
+
+    public void setHostRank(@NotNull Integer hostRank) {
+        this.hostRank = hostRank;
+    }
+
+    @NotNull
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(@NotNull String phone) {
+        this.phone = phone;
+    }
+
+    @NotNull
+    public String getTrivia() {
+        return trivia;
+    }
+
+    public void setTrivia(@NotNull String trivia) {
+        this.trivia = trivia;
+    }
 }

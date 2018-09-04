@@ -3,48 +3,46 @@
 <head th:replace="fragments :: head">
 </head>
 <link th:href="@{/css/triviafinder.css}" rel="stylesheet" />
+<style>
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+p {
+    text-align:center;
+    font-weight:bold;
+  }
+a {
+    text-align:center;
+    }
+</style>
 <body>
     <div class="container body-content">
         <div th:replace="fragments :: page-header"></div>
 
-        <div id="Title" style="align-content:center">
-            <h1>Fallon's Irish Bar  Grill</h1>
-            <p>9200 Olive Blvd #116 <br/>  Olivette, MO 63132 <br/> (314) 991-9800</p>
-            <h4><strong>5/5 stars</strong></h4>
+        <div>
+            <h1 th:text="${name}" />
         </div>
-        <div id="ProfilePicture">
-            <img src="https://static1.squarespace.com/static/5b09ac6d2714e54cf495c233/t/5b11a8496d2a737bcbb8d2f7/1527883854744/static1.squarespace.jpg?format=750w" />
+
+        <div>
+            <p>
+                <a href="${website}" >Website</a>
+                <a href="${menu}" >Menu</a>
+            </p>
         </div>
-        <div id="Links">
-            <a href="https://www.fallonsbarandgrill.com/">Homepage</a>
-            <a href="https://www.fallonsbarandgrill.com/menu/">Menu</a>
+
+
+        <div>
+            <p th:text="${description}" />
         </div>
-        <div id="UserReviews">
-            <table style="width:100%">
-                <tr>
-                    <th>Comment</th>
-                    <th>User</th>
-                    <th>Rating</th>
-                </tr>
-                <tr>
-                    <td>"Love it! Is always so much fun."</td>
-                    <td>TriviaLover55</td>
-                    <td>5/5 Stars</td>
-                </tr>
-                <tr>
-                    <td>"A bit loud but it is a small hole in the wall joint so that is to be expected. The food is really good as well."</td>
-                    <td>Wilma2942</td>
-                    <td>4/5 Stars</td>
-                </tr>
-                <tr>
-                    <td>"Really great atmosphere. Very much has that small town, hole-in-the-wall feeling. Took the family and had a blast. Will totally return in the future."</td>
-                    <td>TriviaDad1946</td>
-                    <td>5/5 Stars</td>
-                </tr>
-            </table>
+
+        <div>
+            <p th:text="${addressLineOne}" />
+            <p th:text="${addressLineTwo}" />
         </div>
+
+
 
     </div>
-
 </body>
 </html>

@@ -17,14 +17,13 @@
 
     <tr>
         <th>Name</th>
-        <th>Rating</th>
         <th>Has Food</th>
     </tr>
 
     <tr th:each="host : ${hosts}">
-        <td th:text="${host.name}"></td>
-        <td th:text="${cheese.description}"></td>
-        <td th:text="${host.name}"></td>
+        <td><a th:href="@{/hostprofile(id=${host.id})}" th:text="${host.name}"></a></td>
+
+        <td th:text="${host.hasFood}"></td>
     </tr>
 
 </table>

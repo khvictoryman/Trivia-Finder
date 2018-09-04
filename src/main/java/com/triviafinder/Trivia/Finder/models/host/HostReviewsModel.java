@@ -2,10 +2,7 @@ package com.triviafinder.Trivia.Finder.models.host;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 public class HostReviewsModel {
@@ -15,9 +12,9 @@ public class HostReviewsModel {
     private Integer id;
 
     @NotNull
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "hostId")
-    private Integer hostReviewId;
+    private Integer host;
 
     @NotNull
     private Integer userId;
@@ -57,6 +54,7 @@ public class HostReviewsModel {
         this.review = review;
     }
 
+/*
     @NotNull
     public Integer getHostId() {
         return hostReviewId;
@@ -65,4 +63,5 @@ public class HostReviewsModel {
     public void setHostId(@NotNull Integer hostId) {
         this.hostReviewId = hostId;
     }
+*/
 }
