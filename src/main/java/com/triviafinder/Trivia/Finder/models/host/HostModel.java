@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -16,11 +17,6 @@ public class HostModel {
     @GeneratedValue
     private Integer id;
 
-    @GeneratedValue
-    private Integer hostId;
-
-    @NotNull(message = "The hostRank came up Null!")
-    private Integer hostRank;
 
     @NotNull(message = "This field is required!")
     @NotEmpty(message = "This field is required!")
@@ -164,14 +160,7 @@ public class HostModel {
         this.hasFood = hasFood;
     }
 
-    @NotNull
-    public Integer getHostRank() {
-        return hostRank;
-    }
 
-    public void setHostRank(@NotNull Integer hostRank) {
-        this.hostRank = hostRank;
-    }
 
     @NotNull
     public String getPhone() {

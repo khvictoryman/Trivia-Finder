@@ -33,9 +33,7 @@ public class HostRegistrationController {
 
     @RequestMapping(value = "/host/host_registration", method = RequestMethod.POST)
     public String showRegistrationFormPOST(@ModelAttribute("host") @Valid HostModel newHost, Errors errors, Model model) {
-        Random rand = new Random();
-        int  n = rand.nextInt(5) + 1;
-        newHost.setHostRank(n);
+
         if (errors.hasErrors()) {
 
             return "/host/host_registration";
