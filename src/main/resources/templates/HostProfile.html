@@ -26,8 +26,8 @@ a {
 
         <div>
             <p>
-                <a href="${website}" >Website</a>
-                <a href="${menu}" >Menu</a>
+                <a th:href="${website}" target="_blank">Website</a>
+                <a th:href="${menu}" target="_blank">Menu</a>
             </p>
         </div>
 
@@ -39,6 +39,11 @@ a {
         <div>
             <p th:text="${addressLineOne}" />
             <p th:text="${addressLineTwo}" />
+        </div>
+
+        <div>
+            <p>Trivia available:</p>
+            <p th:text="${trivia}" />
         </div>
 
 

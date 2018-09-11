@@ -26,6 +26,7 @@ public class HostProfileController {
         model.addAttribute("website", hostdao.findOne(id).getWebsite());
         model.addAttribute("menu", hostdao.findOne(id).getMenu());
         model.addAttribute("description", hostdao.findOne(id).getDescription());
+        model.addAttribute("trivia", hostdao.findOne(id).getTrivia());
         return "hostprofile";
     }
 }
